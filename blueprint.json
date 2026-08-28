@@ -1,0 +1,23 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "landingPage": "/",
+  "login": true,
+  "steps": [
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "git:directory",
+        "url": "https://github.com/MattVmx/ladera-stay-wordpress",
+        "ref": "main",
+        "path": "."
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
