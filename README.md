@@ -2,7 +2,7 @@
 
 Custom WordPress theme for a fictional nature-stay brand. Created as a portfolio project by Matías Speroni.
 
-[Open the live WordPress demo](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/MattVmx/ladera-stay-wordpress/main/blueprint.json)
+[Open the live WordPress demo](https://playground.wordpress.net/#%7B%22%24schema%22%3A%22https%3A%2F%2Fplayground.wordpress.net%2Fblueprint-schema.json%22%2C%22preferredVersions%22%3A%7B%22php%22%3A%228.3%22%2C%22wp%22%3A%22latest%22%7D%2C%22landingPage%22%3A%22%2F%22%2C%22login%22%3Atrue%2C%22steps%22%3A%5B%7B%22step%22%3A%22installTheme%22%2C%22themeData%22%3A%7B%22resource%22%3A%22git%3Adirectory%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FMattVmx%2Fladera-stay-wordpress%22%2C%22ref%22%3A%22main%22%2C%22path%22%3A%22%2F%22%7D%2C%22options%22%3A%7B%22activate%22%3Atrue%7D%7D%5D%7D)
 
 ## What it demonstrates
 
