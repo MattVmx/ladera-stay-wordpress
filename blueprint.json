@@ -13,7 +13,7 @@
         "resource": "git:directory",
         "url": "https://github.com/MattVmx/ladera-stay-wordpress",
         "ref": "main",
-        "path": "."
+        "path": "/"
       },
       "options": {
         "activate": true
