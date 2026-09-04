@@ -4,7 +4,7 @@
 
 **Environment:** WordPress Playground, latest Chrome  
 **Starting state:** Open the homepage, scroll to the inquiry form, and make sure no values are prefilled.  
-**Current execution status:** In progress - 3 of 10 passed  
+**Current execution status:** In progress - 4 of 10 passed  
 **Last execution date:** 2026-09-04
 
 ### TC-INQ-001 - Submit a complete valid inquiry
@@ -176,7 +176,7 @@
 | TC-INQ-001 | Pass | Success message displayed; one private inquiry stored with the correct guest, stay, email, dates, guest count, and message. | - |
 | TC-INQ-002 | Pass | Chrome blocked submission, moved focus to the required empty name field, and WordPress showed no inquiries (`All (0)`). | - |
 | TC-INQ-003 | Pass | Chrome blocked submission, moved focus to the invalid email field (`qa.test`), and WordPress showed no inquiries (`All (0)`). | - |
-| TC-INQ-004 | Not run | - | - |
+| TC-INQ-004 | Pass | Chrome blocked submission and displayed `Selecciona un elemento de la lista` for the required stay selector; WordPress showed no inquiries (`All (0)`). | - |
 | TC-INQ-005 | Not run | - | - |
 | TC-INQ-006 | Not run | - | - |
 | TC-INQ-007 | Not run | - | - |
