@@ -4,7 +4,7 @@
 
 **Environment:** WordPress Playground, latest Chrome  
 **Starting state:** Open the homepage, scroll to the inquiry form, and make sure no values are prefilled.  
-**Current execution status:** In progress - 7 of 10 passed  
+**Current execution status:** In progress - 8 of 10 passed  
 **Last execution date:** 2026-09-04
 
 ### TC-INQ-001 - Submit a complete valid inquiry
@@ -180,7 +180,7 @@
 | TC-INQ-005 | Pass | With the arrival date empty, Chrome blocked submission and displayed `Completa este campo`; WordPress showed no inquiries (`All (0)`). | - |
 | TC-INQ-006 | Pass | The inquiry was rejected, the visitor returned to the form with `Revisá los datos e intentá nuevamente`, and WordPress showed no inquiries (`All (0)`). | - |
 | TC-INQ-007 | Pass | With departure before arrival, the inquiry was rejected and the form displayed `Revisá los datos e intentá nuevamente`; WordPress showed no inquiries (`All (0)`). | - |
-| TC-INQ-008 | Not run | - | - |
+| TC-INQ-008 | Pass | The inquiry was accepted with a success message and saved as one private record; `_ladera_guest_message` exists with an empty value and length 0. | - |
 | TC-INQ-009 | Not run | - | - |
 | TC-INQ-010 | Not run | - | - |
 
