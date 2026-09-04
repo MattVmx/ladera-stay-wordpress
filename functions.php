@@ -157,9 +157,14 @@ function ladera_stay_submit_inquiry() {
 	$guests   = isset( $_POST['guest_count'] ) ? absint( $_POST['guest_count'] ) : 0;
 	$message  = isset( $_POST['guest_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['guest_message'] ) ) : '';
 
-	$check_in_date  = DateTime::createFromFormat( 'Y-m-d', $check_in );
-	$check_out_date = DateTime::createFromFormat( 'Y-m-d', $check_out );
+	$check_in_date  = DateTimeImmutable::createFromFormat( '!Y-m-d', $check_in );
+	$check_out_date = DateTimeImmutable::createFromFormat( '!Y-m-d', $check_out );
+	$today_date     = DateTimeImmutable::createFromFormat( '!Y-m-d', current_time( 'Y-m-d' ) );
 	$is_valid_stay  = $stay_id && 'stay' === get_post_type( $stay_id ) && 'publish' === get_post_status( $stay_id );
+
+	if ( $check_in_date && $today_date && $check_in_date < $today_date ) {
+		ladera_stay_inquiry_redirect( 'past-date' );
+	}
 
 	if ( ! $name || ! is_email( $email ) || ! $is_valid_stay || ! $check_in_date || ! $check_out_date || $check_out_date <= $check_in_date || $guests < 1 || $guests > 8 ) {
 		ladera_stay_inquiry_redirect( 'error' );
@@ -338,3 +343,4 @@ function ladera_stay_add_english_demo_content() {
 	update_option( 'ladera_english_content_version', '2' );
 }
 add_action( 'init', 'ladera_stay_add_english_demo_content', 20 );
+
