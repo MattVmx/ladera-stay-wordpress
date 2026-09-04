@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       finalTitle: 'Hay lugares que<br>te devuelven a vos.', finalAction: 'Consultar una estadía',
       bookingTitle: 'Empezá por<br><em>una consulta.</em>', bookingCopy: 'Contanos qué refugio te interesa y cuándo querés viajar. La consulta quedará guardada en WordPress para que el equipo pueda responderla.',
       bookingNote: 'Sin pago ni confirmación automática. Primero revisamos disponibilidad.', formName: 'Nombre', formStay: 'Refugio', formChooseStay: 'Elegí una opción', formMessage: 'Mensaje opcional', formSubmit: 'Enviar consulta',
-      formSuccess: 'Recibimos tu consulta. Te responderemos pronto.', formError: 'Revisá los datos e intentá nuevamente.',
+      formSuccess: 'Recibimos tu consulta. Te responderemos pronto.', formPastDate: 'Las fechas de la estadía no pueden estar en el pasado.', formError: 'Revisá los datos e intentá nuevamente.',
       footerIntro: 'Refugios con diseño, naturaleza y tiempo para estar.', footerExplore: 'Explorar', footerContact: 'Contacto', yourEmail: 'Tu email', conceptCredit: 'Proyecto conceptual por Matías Speroni',
       archiveTitle: 'Refugios para<br><em>quedarse un poco más.</em>', archiveCopy: 'Una colección pequeña de lugares con diseño, calma y naturaleza cerca.',
       theStay: 'LA ESTADÍA', availability: 'Consultar disponibilidad', darkMode: 'Activar tema oscuro', lightMode: 'Activar tema claro', switchLanguage: 'Switch to English'
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       finalTitle: 'Some places<br>bring you back to yourself.', finalAction: 'Inquire about a stay',
       bookingTitle: 'Start with<br><em>an inquiry.</em>', bookingCopy: 'Tell us which retreat interests you and when you would like to travel. Your inquiry will be saved in WordPress so the team can respond.',
       bookingNote: 'No payment or automatic confirmation. We review availability first.', formName: 'Name', formStay: 'Retreat', formChooseStay: 'Choose an option', formMessage: 'Optional message', formSubmit: 'Send inquiry',
-      formSuccess: 'We received your inquiry. We will be in touch soon.', formError: 'Please review the details and try again.',
+      formSuccess: 'We received your inquiry. We will be in touch soon.', formPastDate: 'Stay dates cannot be in the past.', formError: 'Please review the details and try again.',
       footerIntro: 'Design-led retreats, nature, and time to simply be.', footerExplore: 'Explore', footerContact: 'Contact', yourEmail: 'Your email', conceptCredit: 'Concept project by Matías Speroni',
       archiveTitle: 'Retreats worth<br><em>staying a little longer.</em>', archiveCopy: 'A small collection of places shaped by design, calm, and nearby nature.',
       theStay: 'THE STAY', availability: 'Check availability', darkMode: 'Enable dark theme', lightMode: 'Enable light theme', switchLanguage: 'Cambiar a español'
@@ -120,3 +120,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 });
+
