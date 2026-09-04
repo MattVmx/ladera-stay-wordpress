@@ -4,7 +4,8 @@
 
 **Environment:** WordPress Playground, latest Chrome  
 **Starting state:** Open the homepage, scroll to the inquiry form, and make sure no values are prefilled.  
-**Current execution status:** Not run
+**Current execution status:** In progress - 1 of 10 passed  
+**Last execution date:** 2026-09-04
 
 ### TC-INQ-001 - Submit a complete valid inquiry
 
@@ -172,7 +173,7 @@
 
 | ID | Status | Actual result | Bug ID |
 | --- | --- | --- | --- |
-| TC-INQ-001 | Not run | - | - |
+| TC-INQ-001 | Pass | Success message displayed; one private inquiry stored with the correct guest, stay, email, dates, guest count, and message. | - |
 | TC-INQ-002 | Not run | - | - |
 | TC-INQ-003 | Not run | - | - |
 | TC-INQ-004 | Not run | - | - |
