@@ -4,7 +4,7 @@
 
 **Environment:** WordPress Playground, latest Chrome  
 **Starting state:** Open the homepage, scroll to the inquiry form, and make sure no values are prefilled.  
-**Current execution status:** In progress - 9 of 10 passed  
+**Current execution status:** Complete - 9 of 10 passed, 1 failed  
 **Last execution date:** 2026-09-04
 
 ### TC-INQ-001 - Submit a complete valid inquiry
@@ -182,5 +182,5 @@
 | TC-INQ-007 | Pass | With departure before arrival, the inquiry was rejected and the form displayed `Revisá los datos e intentá nuevamente`; WordPress showed no inquiries (`All (0)`). | - |
 | TC-INQ-008 | Pass | The inquiry was accepted with a success message and saved as one private record; `_ladera_guest_message` exists with an empty value and length 0. | - |
 | TC-INQ-009 | Pass | Exactly one matching private record was found. Guest, stay, email, dates, guest count, and message matched TC-INQ-001; the post type is not public or publicly queryable and is excluded from search. | - |
-| TC-INQ-010 | Not run | - | - |
+| TC-INQ-010 | Fail | The site displayed the success message and created a second private inquiry for the past dates 2026-08-10 to 2026-08-13 instead of rejecting it. | [BUG-INQ-001](BUG_REPORTS.md#bug-inq-001---past-stay-dates-are-accepted) |
 
