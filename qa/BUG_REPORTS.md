@@ -2,12 +2,13 @@
 
 ## BUG-INQ-001 - Past stay dates are accepted
 
-**Status:** Open  
+**Status:** Resolved  
 **Severity:** High  
 **Priority:** High  
 **Environment:** WordPress Playground, latest Chrome  
 **Linked test:** TC-INQ-010  
 **Found:** 2026-09-04
+**Resolved:** 2026-09-04
 
 ### Steps to reproduce
 
@@ -31,4 +32,11 @@
 ### Technical note
 
 The date inputs do not define a minimum date, and the server validates only that departure is later than arrival. It does not compare arrival with the current date.
+
+### Resolution
+
+- The arrival and departure inputs now use the current WordPress date as their minimum value.
+- Server-side validation rejects an arrival date earlier than the current WordPress date.
+- A specific bilingual error message was added for past dates.
+- TC-INQ-010 passed on retest: the browser blocked the submission and WordPress created no inquiry (`All (0)`).
 
