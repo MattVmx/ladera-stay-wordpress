@@ -133,6 +133,8 @@ $featured_stays = new WP_Query(
 		<div class="booking-form-wrap">
 			<?php if ( isset( $_GET['inquiry'] ) && 'success' === sanitize_key( wp_unslash( $_GET['inquiry'] ) ) ) : ?>
 				<p class="form-status form-status-success" role="status" data-i18n="formSuccess">Recibimos tu consulta. Te responderemos pronto.</p>
+			<?php elseif ( isset( $_GET['inquiry'] ) && 'past-date' === sanitize_key( wp_unslash( $_GET['inquiry'] ) ) ) : ?>
+				<p class="form-status form-status-error" role="alert" data-i18n="formPastDate">Las fechas de la estadía no pueden estar en el pasado.</p>
 			<?php elseif ( isset( $_GET['inquiry'] ) && 'error' === sanitize_key( wp_unslash( $_GET['inquiry'] ) ) ) : ?>
 				<p class="form-status form-status-error" role="alert" data-i18n="formError">Revisá los datos e intentá nuevamente.</p>
 			<?php endif; ?>
@@ -165,11 +167,11 @@ $featured_stays = new WP_Query(
 				</label>
 				<label class="form-field">
 					<span data-i18n="checkIn">Llegada</span>
-					<input type="date" name="check_in" required>
+					<input type="date" name="check_in" min="<?php echo esc_attr( current_time( 'Y-m-d' ) ); ?>" required>
 				</label>
 				<label class="form-field">
 					<span data-i18n="checkOut">Salida</span>
-					<input type="date" name="check_out" required>
+					<input type="date" name="check_out" min="<?php echo esc_attr( current_time( 'Y-m-d' ) ); ?>" required>
 				</label>
 				<label class="form-field form-field-wide">
 					<span data-i18n="guests">Huéspedes</span>
@@ -198,3 +200,4 @@ $featured_stays = new WP_Query(
 </section>
 
 <?php get_footer(); ?>
+
